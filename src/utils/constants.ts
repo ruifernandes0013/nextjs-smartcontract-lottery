@@ -1,23 +1,10 @@
 import { Address } from "viem";
-
-interface Input {
-  internalType: string;
-  name: string;
-  type: string;
-}
-
-interface Interface {
-  inputs: Input[];
-  name: string;
-  type: string;
-}
-
 interface IContractConfig {
   address: Address;
-  abi: Interface[];
+  abi: unknown[];
 }
 export const contractConfig: IContractConfig = {
-  address: "0x91CB85B841Ae24F2384549C828d2C8d401989338",
+  address: "0x5E5b2E0dEA32BfdE38f3106A683D56cffC6fC82c",
   abi: [
     {
       inputs: [
