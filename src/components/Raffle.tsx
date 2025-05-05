@@ -1,3 +1,5 @@
+"use client";
+
 import { contractConfig } from "@/utils/constants";
 import { useState } from "react";
 import {
