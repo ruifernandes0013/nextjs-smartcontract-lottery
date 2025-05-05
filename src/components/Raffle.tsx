@@ -1,6 +1,5 @@
 import { contractConfig } from "@/utils/constants";
 import { useState } from "react";
-import { formatUnits } from "viem";
 import {
   useAccount,
   useBalance,
@@ -19,7 +18,7 @@ export default function Raffle() {
   const { address, chainId } = useAccount();
   const { data: balance } = useBalance({ address });
   const { data: totalPrize } = useBalance({ address: contractConfig.address });
-  const { data: hash, writeContract } = useWriteContract();
+  const { writeContract } = useWriteContract();
 
   const { data } = useReadContracts({
     contracts: [
