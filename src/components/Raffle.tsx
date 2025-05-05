@@ -84,7 +84,7 @@ export default function Raffle() {
           {formattedEntranceFee} ETH.
         </p>
         <b>
-          A new winner is picked every {interval?.result ? interval.result : 0}{" "}
+          A new winner picked every {Number(interval?.result?.toString() ?? 0)}{" "}
           seconds.
         </b>
       </div>
@@ -94,9 +94,9 @@ export default function Raffle() {
           <h1 className="text-black text-xl font-bold">Previous Winner</h1>
           <p className="block text-black">
             {prevWinner?.result
-              ? prevWinner.result.slice(0, 6) +
+              ? prevWinner.result.toString().slice(0, 6) +
                 "..." +
-                prevWinner.result.slice(-4)
+                prevWinner.result.toString().slice(-4)
               : "-"}
           </p>
         </div>
